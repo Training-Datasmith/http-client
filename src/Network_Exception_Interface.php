@@ -1,11 +1,9 @@
 <?php
 
-declare(strict_types=1);
-
+declare (strict_types=1);
 namespace Psr\Http\Client;
 
-use Psr\Http\Message\RequestInterface;
-
+use Psr\Http\Message\Request_Interface;
 /**
  * Thrown when the request cannot be completed because of network issues.
  *
@@ -13,12 +11,12 @@ use Psr\Http\Message\RequestInterface;
  *
  * Example: the target host name can not be resolved or the connection failed.
  */
-interface NetworkExceptionInterface extends ClientExceptionInterface
+interface Network_Exception_Interface extends Client_Exception_Interface
 {
     /**
      * Returns the request.
      *
      * The request object MAY be a different object from the one passed to ClientInterface::sendRequest()
      */
-    public function getRequest(): RequestInterface;
+    public function get_request(): Request_Interface;
 }

@@ -1,11 +1,9 @@
 <?php
 
-declare(strict_types=1);
-
+declare (strict_types=1);
 namespace Psr\Http\Client;
 
-use Psr\Http\Message\RequestInterface;
-
+use Psr\Http\Message\Request_Interface;
 /**
  * Exception for when a request failed.
  *
@@ -13,12 +11,12 @@ use Psr\Http\Message\RequestInterface;
  *      - Request is invalid (e.g. method is missing)
  *      - Runtime request errors (e.g. the body stream is not seekable)
  */
-interface RequestExceptionInterface extends ClientExceptionInterface
+interface Request_Exception_Interface extends Client_Exception_Interface
 {
     /**
      * Returns the request.
      *
      * The request object MAY be a different object from the one passed to ClientInterface::sendRequest()
      */
-    public function getRequest(): RequestInterface;
+    public function get_request(): Request_Interface;
 }
